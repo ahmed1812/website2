@@ -1,10 +1,19 @@
 /**
-* Template Name: iPortfolio - v1.0.0
-* Template URL: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
+my css
 */
 
+.alert-danger1 {
+  color: #004085;
+  background-color: #cce5ff;
+  border-color: #b8daff;
+}
+.alert1 {
+  position: relative;
+  padding: 0rem 1.25rem;
+  margin-bottom: 1rem;
+ 
+  border-radius: .25rem;
+}
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
@@ -218,7 +227,7 @@ h1, h2, h3, h4, h5, h6 {
 
 #hero:before {
   content: "";
-  background: rgba(5, 13, 24, 0.7);
+  background: rgba(5, 13, 24, 0.3);
   position: absolute;
   bottom: 0;
   top: 0;

@@ -5,6 +5,8 @@ const bodyParser = require('body-parser');
 const exphbs = require('express-handlebars');
 const path = require('path');
 const nodemailer = require('nodemailer');
+const expressValidator = require('express-validator');
+const expressSession = require('express-session');
 const PORT = process.env.PORT || 5000;
 const app = express();
 
@@ -17,6 +19,7 @@ app.use('/public', express.static(path.join(__dirname, 'public')));
 
 // Body Parser Middleware
 app.use(bodyParser.urlencoded({ extended: false }));
+app.use(expressSession({secret: 'max', saveUninitialized: false, resave: false}));
 app.use(bodyParser.json());
 
 app.get('/', (req, res) => {
@@ -66,7 +69,7 @@ app.post('/send', (req, res) => {
       console.log('Message sent: %s', info.messageId);   
       console.log('Preview URL: %s', nodemailer.getTestMessageUrl(info));
 
-      res.render('contact', {msg:'Email has been sent'});
+      res.render('contact', {msg:'Email has been sent!!'});
   });
   });
 
